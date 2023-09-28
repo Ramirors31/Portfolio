@@ -1,0 +1,40 @@
+.appHeaderContainer {
+        background-color: #0c0d0d;
+        /* background-color: #282c34; */
+        height: 80px;
+        /* min-height: 100vh; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+        padding: 0 20px;
+        /* background-color: #191b1f; */
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+}
+
+#headerName {
+    color: #EDEF70;;
+    /* margin-right: auto; */
+  }
+
+  #headerTabsMenu {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  .menuOption {
+    cursor: pointer;
+    padding: 10px;
+    /* margin: 0 50px; */
+    /* width: 25%; */
+  }
+
+  .menuOption:hover {
+    color: #EDEF70;
+    /* border-bottom: 2px solid #EDEF70; */
+    transition: ease-in 200ms;
+  }

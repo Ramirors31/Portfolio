@@ -1,0 +1,50 @@
+#landingContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+
+.presentationContainer {
+    height: 620px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 80px; 
+}
+
+.landingCardContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* margin-top: 80px; */
+}
+
+#landingTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+
+.pageYellowText {
+    color: #EDEF70;
+    margin: 0;
+  }
+
+  .iconsContainer {
+    margin-top: 40px;
+    align-self: flex-start;
+  }
+
+  .iconImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .exampleProfPic {
+    border-radius: 100%;
+    width: 280px;
+    height: 280px;
+    border: 2px solid #EDEF70;
+  }

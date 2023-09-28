@@ -1,0 +1,18 @@
+#carreerContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+.carreerCard {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: whitesmoke;  
+    max-width: 430px;
+    padding: 20px;
+    align-self: flex-start;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    text-align: start;
+}

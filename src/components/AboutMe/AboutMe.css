@@ -1,0 +1,49 @@
+.presentationCard {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+  }
+
+  .exampleProfPic {
+    border-radius: 100%;
+    width: 280px;
+    height: 280px;
+    border: 2px solid #EDEF70;
+  }
+
+  #myDescriptionContainer {
+    text-align: start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+
+  }
+
+  .actionBtn {
+    background-color: #EDEF70;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #191b1f;
+  }
+
+  .actionBtn:hover {
+    background-color: #FFD907;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 22px 21px ;
+    transition: ease-in 300ms;
+  }
