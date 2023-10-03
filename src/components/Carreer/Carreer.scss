@@ -1,0 +1,70 @@
+#carreerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 820px;
+    .carreerCardsContainer {
+      height: 100%;
+      width: 50%;
+      border-right: 2px solid #EDEF70;
+      position: relative;
+      padding: 20px;
+      .carreerCard:nth-child(odd) {
+        background-color: #EDEF70;
+        color: #1a1a1a;
+        position: absolute;
+        right: 30px;
+        .cardPopover {
+          width: 0; 
+          height: 0; 
+          border-left: 100px solid #EDEF70;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent; 
+          transform: scale(0.3);
+          position: absolute;
+          top: 25%;
+          right: -20%;
+        }
+      }
+      .carreerCard:nth-child(even) {
+        background-color: #1a1a1a;
+        color: #EDEF70;
+        position: absolute;
+        top: 320px;
+        right: -448px;
+        .cardPopover {
+          width: 0; 
+          height: 0; 
+          border-right: 100px solid #1a1a1a;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent; 
+          transform: scale(0.3);
+          position: absolute;
+          top: 25%;
+          left: -22%;
+        }
+      }
+    }
+}
+
+.carreerCard {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: whitesmoke;  
+    max-width: 430px;
+    padding: 20px;
+    align-self: flex-start;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+.title{
+  color: #edef70; 
+  width: 100%; 
+  padding-bottom: 10px; 
+  border-left:12px solid #EDEF70;
+  padding: 10px;
+  font-size: 2rem;
+}

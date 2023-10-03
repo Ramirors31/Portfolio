@@ -1,4 +1,4 @@
-import './Carreer.css';
+import './Carreer.scss';
 export const Carreer = () => {
     const jobs = [
       {
@@ -28,21 +28,27 @@ export const Carreer = () => {
     ]
     return(
         <div id="carreerContainer">
-        <h2 style={{"color": "#edef70",  "borderBottom": "2px solid #edef70", "width": "100%", "paddingBottom": "10px"}}>Carrer </h2>
-        {
-          jobs.map((job, index) => {
-            return (
-              <div className="carreerCard">
-                <h3 style={{"margin": "0 0 10px 0"}}>{job.title}</h3>
-                <h4 style={{"margin": "0 0 10px 0"}}>{job.company}</h4>
-                <h5 style={{"margin": "0 0 10px 0"}}>{job.date}</h5>
-                <ul key={index}>
-                  {job.description.map((descVal, index) => <li key={index}>{descVal}</li>)}
-                </ul>
-              </div>
-            )
-          })
-        }
+          <h2 className='title'>Carrer </h2>
+          <div className="carreerCardsContainer">
+            {
+              jobs.map((job, index) => {
+                return (
+                  <div className="carreerCard">
+                    <div style={{"position": "relative"}}>
+                    <div className='cardPopover'>
+                    </div>
+                    <h3 style={{"margin": "0 0 10px 0"}}>{job.title}</h3>
+                    <h4 style={{"margin": "0 0 10px 0"}}>{job.company}</h4>
+                    <h5 style={{"margin": "0 0 10px 0"}}>{job.date}</h5>
+                    <ul key={index}>
+                      {job.description.map((descVal, index) => <li key={index}>{descVal}</li>)}
+                    </ul>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
       </div>
     )
 }

@@ -1,32 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import AuxFnsService from './services/auxFnsService';
 import './App.css';
 import { Header } from './components/header';
 import { Landing } from './components/Landing/Landing';
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { Carreer } from './components/Carreer/Carreer';
+import { Contact } from './components/Contact/Contact';
+import { MyProyects } from './components/Proyects/MyProyects';
+
 function App() {
+  const auxService = new AuxFnsService();
+  auxService.logeo();
+  
   return (
-    <div style={{"backgroundColor": "#0e0f11", "minHeight":"800px"}} className="App">
+    <div style={{"backgroundColor": "#0e0f11", "minHeight":"2000px"}} className="App">
       <Header />
       <Landing/>
       <AboutMe/>
       <Carreer/>
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <MyProyects/>
+      <Contact/>
     </div>
   );
 }

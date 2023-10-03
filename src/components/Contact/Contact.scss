@@ -1,0 +1,39 @@
+.title{
+    color: #edef70; 
+    width: 100%; 
+    padding-bottom: 10px; 
+    border-left:12px solid #EDEF70;
+    padding: 10px;
+    font-size: 2rem;
+  }
+  #contactContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .formContainer {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        .formCard {
+          display: flex;
+          flex-direction: column;
+          width: 420px;
+          .input{
+            width: 100%;
+            margin-bottom: 20px;
+            color: #EDEF70;
+            border-color: #EDEF70;
+            background-color:#1a1a1a;
+          }
+        }
+    }
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+  }
