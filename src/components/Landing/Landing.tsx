@@ -1,7 +1,7 @@
 import otacon from '../../assets/MGSOtaconPP.webp'
 import gitLogo from '../../assets/Octicons-mark-github.svg.png';
 import linkedinLogo from '../../assets/LinkedIn_icon.svg.png';
-import './Landing.css'
+import './Landing.scss'
 import Typewriter from 'typewriter-effect';
 export const Landing = () => {
     return(

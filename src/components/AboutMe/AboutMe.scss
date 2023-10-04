@@ -1,7 +1,8 @@
+@import '../../styles/variables.scss';
 #aboutMeContainer {
   display: flex;
   flex-direction: row;
-  height: 620px; 
+  height: $section-height; 
   align-items: center;
   .exampleProfPic {
     border-radius: 100%;
@@ -26,7 +27,7 @@
 }
 
 .title{
-  color: #edef70; 
+  color: $primary-color; 
   width: 100%; 
   padding-bottom: 10px; 
   border-left:12px solid #EDEF70;

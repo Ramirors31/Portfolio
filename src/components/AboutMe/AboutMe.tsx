@@ -1,8 +1,10 @@
 import './AboutMe.scss';
 import yop from '../../assets/yop.jpg';
 import {PictureAsPdf} from '@mui/icons-material'
-// import Button from '@mui/material/Button';
 import {Button} from '@mui/material';
+import {ThemeProvider} from '@mui/material/styles'
+import personalTheme from '../../services/themeProvider'
+
 export const AboutMe = () => {
     return(
         <div id="aboutMeContainer">
@@ -16,7 +18,9 @@ export const AboutMe = () => {
                     <p style={{"color": "whitesmoke", "fontSize": "1.2rem"}}>
                     Take a look at my portfolio and discover how I transform ideas into memorable web experiences. I hope to collaborate with you soon!
                     </p>
-                    <Button endIcon={<PictureAsPdf/>} variant='outlined' style={{"width": "40%", "marginLeft": "auto"}}>Download CV</Button>
+                    <ThemeProvider theme={personalTheme}>
+                        <Button color='primary' endIcon={<PictureAsPdf/>} variant='outlined' style={{"width": "40%", "marginLeft": "auto"}}>Download CV</Button>
+                    </ThemeProvider>
                 </div>
             </div>
             </div>

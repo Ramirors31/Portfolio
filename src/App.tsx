@@ -12,13 +12,15 @@ function App() {
   auxService.logeo();
   
   return (
-    <div style={{"backgroundColor": "#0e0f11", "minHeight":"2000px"}} className="App">
-      <Header />
-      <Landing/>
-      <AboutMe/>
-      <Carreer/>
-      <MyProyects/>
-      <Contact/>
+    <div className="App">
+      <div className="holeContent">
+        <Header />
+        <Landing/>
+        <AboutMe/>
+        <Carreer/>
+        <MyProyects/>
+        <Contact/>
+      </div>
     </div>
   );
 }
