@@ -2,7 +2,7 @@ import "./Carreer.scss";
 import BoltIcon from '@mui/icons-material/Bolt';
 export const Carreer = () => {
   return (
-    <div id="carreerContainer">
+    <div className="animate" id="carreerContainer">
       <h2 className="title">Carrer </h2>
       <div id="carreers">
         <div className="carreerCardsContainer">
@@ -27,7 +27,7 @@ const JobCard = (props: any) => {
         <h5>{props.job.date}</h5>
         <ul key={props.index}>
           {props.job.description.map((descVal: any, index: any) => (
-            <li key={index}>{descVal}</li>
+            <li key={descVal}>{descVal}</li>
           ))}
         </ul>
       </div>
@@ -41,10 +41,9 @@ const jobs = [
     company: "Pertendo",
     date: "December 2020- May 2021",
     description: [
-      "Frontend development using angular and react",
-      "Backend development with node",
-      "Firebase",
-      "SCRUM",
+      "Angular",
+      "Node",
+      "Agile work methodologies",
     ],
   },
   {
@@ -52,12 +51,10 @@ const jobs = [
     company: "Pertendo",
     date: "May 2021 - Actually",
     description: [
-      "Frontend Development with angular and react",
-      "Backend development with node",
-      "Firebase",
-      "Supase",
-      "Interface and software requierments design",
-      "SCRUM",
+      "Angular and React",
+      "Node",
+      "PostgreSQL",
+      "Software requierments design",
     ],
   },
 ];

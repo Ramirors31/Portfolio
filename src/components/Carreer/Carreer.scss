@@ -2,11 +2,12 @@
 #carreerContainer {
   display: flex;
   flex-direction: column;
-  height: 800px;
+  height: 600px;
   #carreers {
     display: flex;
     flex-direction: row;
     height: 100%;
+    // padding: 0 10px;
   }
 
   .carreerCardsContainer:nth-child(odd) {
@@ -39,20 +40,20 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: whitesmoke;
   max-width: 430px;
-  padding: 20px;
+  padding: 8px 10px;
   align-self: flex-start;
   border-radius: 20px;
   margin-bottom: 20px;
   text-align: start;
   position: relative;
   h3 {
-    margin: 0 0 10px 0;
+    margin: 0;
   }
   h4 {
-    margin: 0 0 10px 0;
+    margin: 0;
   }
   h5 {
-    margin: 0 0 10px 0;
+    margin: 0;
   }
   .boltIcon {
     position: absolute;
@@ -70,6 +71,11 @@
   }
   .boltIcon1 {
     left: -50px;
+  }
+
+  ul {
+    padding: 5px 15px !important;
+    margin: 0;
   }
 }
 

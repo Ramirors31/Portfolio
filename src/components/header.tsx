@@ -15,8 +15,6 @@ export const Header = () => {
 
   const handleScroll = () => {
     const currentScrollPosition = window.pageYOffset;
-    console.log("Prev position", prevScrollPostion);
-    console.log("scrolling, current position", currentScrollPosition);
     if (
       prevScrollPostion < currentScrollPosition &&
       currentScrollPosition > 180
@@ -53,8 +51,8 @@ const AppMenu = () => {
   return (
     <div id="menuContainer">
       <div className="hideWhenNarrow" style={{ width: "fit-content" }}>
-        {menuOptions.map((option) => (
-          <button className="menuOption">{option}</button>
+        {menuOptions.map((option, index) => (
+          <button key={index} className="menuOption">{option}</button>
         ))}
       </div>
       <div className="hideWhenWide" style={{width:"fit-content"}}>

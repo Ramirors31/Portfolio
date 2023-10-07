@@ -12,7 +12,7 @@ import css from "../../assets/stackIcon/css.png";
 import angular from "../../assets/stackIcon/angular.png";
 export const Landing = () => {
   return (
-    <div className="generalContainer">
+    <div className="generalContainer animate">
       <div className="presentationContainer">
         {/* <div className='landingCardContainer'> */}
         <div id="landingTextContainer">

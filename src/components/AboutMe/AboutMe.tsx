@@ -4,9 +4,41 @@ import { PictureAsPdf } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import personalTheme from "../../services/themeProvider";
+import { useState, useEffect } from "react";
 const cv = require("../../assets/files/CVRJ.pdf");
 
 export const AboutMe = () => {
+  const [prevScrollPostion, setPrevScrollPostion] = useState(0);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPostion]);
+
+  const handleScroll = () => {
+    const currentScrollPosition = window.scrollY;
+    const sectionContainer: any = document.getElementById("aboutMeContainer");
+    const sectionYPostion = sectionContainer.offsetTop - 200;
+    // console.log('scroll position', currentScrollPosition);
+    // console.log(sectionYPostion);
+    if (currentScrollPosition >= sectionYPostion) {
+      sectionContainer.style.display = "flex";
+      setSectionVisible(true);
+      // console.log("section visible", currentScrollPosition, sectionYPostion);
+    } else if (currentScrollPosition < sectionYPostion) {
+      // sectionContainer.style.display = "none"
+      // setSectionVisible(false);
+    }
+    // if (
+    //   prevScrollPostion < currentScrollPosition &&
+    //   currentScrollPosition > 180
+    // ) {
+    // setHeaderVisible(false);
+    // } else if (prevScrollPostion > currentScrollPosition)
+    // setHeaderVisible(true);
+    setPrevScrollPostion(currentScrollPosition);
+  };
+
   const cvDownload = () => {
     const filePath = cv;
     const link = document.createElement("a");
@@ -15,7 +47,7 @@ export const AboutMe = () => {
     link.click();
   };
   return (
-    <div id="aboutMeContainer">
+    <div className="animate" id="aboutMeContainer">
       <div>
         <h2 className="title">About me </h2>
         <div id="contentContainer">

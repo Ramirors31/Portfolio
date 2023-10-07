@@ -17,6 +17,10 @@ code {
   display: none;
 }
 
+.hideElement {
+  display: none !important;
+}
+
 @media screen and (max-width: $mobile-devices-width) {
   .hideWhenNarrow {
     display: none;

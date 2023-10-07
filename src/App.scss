@@ -1,0 +1,135 @@
+.App {
+  height: 100%;
+  width: 100%;
+  background-color: #0e0f11;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.holeContent {
+  animation: ease-in 700ms page-entrance;
+  /* padding: 0 45px 30px 35px; */
+  display: flex;
+  flex-direction: column;
+}
+
+section .animate {
+  transition: 1s ease-in-out;
+  // background-color: blue;
+}
+
+.section1 .animate {
+  transform: translateX(-100%) !important;
+  // background-color: red;
+}
+
+.section1.show-animate .animate {
+  transform: translateX(0) !important;
+}
+
+.section2 .animate {
+  transform: translateX(100%);
+  // background-color: red;
+}
+
+.section2.show-animate .animate {
+  transform: translateX(0) !important;
+}
+
+.section3 .animate {
+  transform: translateY(-100%);
+  opacity: 0;
+  // background-color: red;
+}
+
+.section3.show-animate .animate {
+  transform: translateY(0) !important;
+  opacity: 1;
+}
+.section4 .animate {
+  // transform: translateY(-100%);
+  opacity: 0;
+  // background-color: red;
+}
+
+.section4.show-animate .animate {
+  // transform: translateY(0) !important;
+  opacity: 1;
+}
+
+.section5 .animate {
+  transform: translateY(100%);
+  opacity: 0;
+  // background-color: red;
+}
+
+.section5.show-animate .animate {
+  transform: translateY(0) !important;
+  opacity: 1;
+}
+// .section1 {
+//   transform: translateX(-100%);
+// }
+
+// section1.show-animate {
+//   transform: translateX(0) !important;
+// }
+
+// .section1.animate {
+//   transition: 1s;
+// }
+
+// .section1.show-animate {
+//   transform: translateX(0);
+// }
+
+// .section {
+//   // background-color: red;
+//   .section1 {
+//     background-color: red;
+//   }
+//   .animate {
+//     transition: 5s;
+//   }
+//   .section1 {
+//     opacity: 0;
+//     transform: translateX(-100%);
+//     .active {
+//       opacity: 1;
+//       transform: translateX(0);
+//     }
+//   }
+// }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes page-entrance {
+  from {
+    /* transform: translateX(-100%); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(0); */
+    opacity: 1;
+  }
+}
