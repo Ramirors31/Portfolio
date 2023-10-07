@@ -6,15 +6,12 @@ import { AboutMe } from './components/AboutMe/AboutMe';
 import { Carreer } from './components/Carreer/Carreer';
 import { Contact } from './components/Contact/Contact';
 import { MyProyects } from './components/Proyects/MyProyects';
-
-function App() {
-  const auxService = new AuxFnsService();
-  auxService.logeo();
-  
+import { useEffect, useState } from 'react';
+function App() {  
   return (
     <div className="App">
       <div className="holeContent">
-        <Header />
+        <Header/>
         <Landing/>
         <AboutMe/>
         <Carreer/>

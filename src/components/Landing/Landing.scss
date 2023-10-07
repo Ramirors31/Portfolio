@@ -1,51 +1,101 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 #landingContainer {
-    display: flex;
-    flex-direction: column;
-    margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
 }
 
-.presentationContainer {
-    height: $section-height; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+.generalContainer {
+  display: flex;
+  flex-direction: column;
+  // height: $section-height;
+  padding-top: 180px;
+  .presentationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin-top: 80px;  */
+  }
+  .myStackContainer {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    p {
+      font-size: 1.6rem;
+      border-right: 6px solid $primary-color;
+      padding-right: 12px;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      margin: 10px 20px;
+      // cursor: pointer;
+      transition: all 100ms ease-in-out;
+      // flex-grow: 0.4;
+      flex-basis: 200;
+    }
+    img:hover {
+      transform: scale(1.2) translateY(-10px);
+      transition: all 100ms ease-in-out;
+      // transition: all 0.5s;
+    }
+  }
 }
 
 .landingCardContainer {
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    /* margin-top: 80px; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* margin-top: 80px; */
 }
 
 #landingTextContainer {
-    display: flex;
-    flex-direction: column;
-    margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+  font-size: 1.6rem;
 }
 
 .pageYellowText {
-    color: #EDEF70;
-    margin: 0;
-  }
+  color: #edef70;
+  margin: 0;
+}
 
-  .iconsContainer {
-    margin-top: 40px;
-    align-self: flex-start;
+.iconsContainer {
+  margin-top: 40px;
+  align-self: flex-start;
+  font-size: 1.4rem;
+  padding-left: 15px;
+  .themeIcon {
+    scale: 2.6;
+    margin-right: 55px;
   }
+}
 
-  .iconImage {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    cursor: pointer;
+.iconImage {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.exampleProfPic {
+  border-radius: 100%;
+  width: 280px;
+  height: 280px;
+  border: 2px solid #edef70;
+}
+
+@media screen and (max-width: $mobile-devices-width) {
+  .presentationContainer {
+    flex-direction: column;
   }
-
   .exampleProfPic {
-    border-radius: 100%;
-    width: 280px;
-    height: 280px;
-    border: 2px solid #EDEF70;
+    margin-top: 25px;
   }
+}

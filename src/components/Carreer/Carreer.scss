@@ -1,71 +1,84 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 #carreerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  #carreers {
     display: flex;
-    flex-direction: column;
-    height: $section-height;
-    .carreerCardsContainer {
-      height: 100%;
-      width: 50%;
-      border-right: 2px solid #EDEF70;
-      position: relative;
-      padding: 20px;
-      .carreerCard:nth-child(odd) {
-        background-color: #EDEF70;
-        color: #1a1a1a;
-        position: absolute;
-        right: 30px;
-        .cardPopover {
-          width: 0; 
-          height: 0; 
-          border-left: 100px solid #EDEF70;
-          border-top: 50px solid transparent;
-          border-bottom: 50px solid transparent; 
-          transform: scale(0.3);
-          position: absolute;
-          top: 25%;
-          right: -20%;
-        }
-      }
-      .carreerCard:nth-child(even) {
-        background-color: #1a1a1a;
-        color: #EDEF70;
-        position: absolute;
-        top: 320px;
-        right: -448px;
-        .cardPopover {
-          width: 0; 
-          height: 0; 
-          border-right: 100px solid #1a1a1a;
-          border-top: 50px solid transparent;
-          border-bottom: 50px solid transparent; 
-          transform: scale(0.3);
-          position: absolute;
-          top: 25%;
-          left: -22%;
-        }
-      }
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .carreerCardsContainer:nth-child(odd) {
+    border-right: 4px solid #edef70;
+  }
+  .carreerCardsContainer {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    padding-top: 30px;
+    .carreerCard0 {
+      background-color: #edef70;
+      color: #1a1a1a;
+      margin-left: auto;
+      margin-right: 35px;
     }
+    .carreerCard1 {
+      background-color: #1a1a1a;
+      color: #edef70;
+      margin-top: auto;
+      margin-left: 35px;
+    }
+  }
 }
 
 .carreerCard {
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    color: whitesmoke;  
-    max-width: 430px;
-    padding: 20px;
-    align-self: flex-start;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    text-align: start;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: whitesmoke;
+  max-width: 430px;
+  padding: 20px;
+  align-self: flex-start;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-align: start;
+  position: relative;
+  h3 {
+    margin: 0 0 10px 0;
+  }
+  h4 {
+    margin: 0 0 10px 0;
+  }
+  h5 {
+    margin: 0 0 10px 0;
+  }
+  .boltIcon {
+    position: absolute;
+    top: 50%;
+    transform: scale(1.6);
+    border: 3px solid #edef70;
+    border-radius: 100%;
+    z-index: 10;
+    background-color: #edef70;
+    color: #1a1a1a;
+  }
+
+  .boltIcon0 {
+    right: -50px;
+  }
+  .boltIcon1 {
+    left: -50px;
+  }
 }
 
-.title{
-  color: #edef70; 
-  width: 100%; 
-  padding-bottom: 10px; 
-  border-left:12px solid #EDEF70;
+
+.title {
+  color: #edef70;
+  width: 100%;
+  padding-bottom: 10px;
+  border-left: 12px solid #edef70;
   padding: 10px;
   font-size: 2rem;
 }

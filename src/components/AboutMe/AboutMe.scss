@@ -1,14 +1,14 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 #aboutMeContainer {
   display: flex;
-  flex-direction: row;
-  height: $section-height; 
+  // flex-direction: row;
+  // height: $section-height;
   align-items: center;
   .exampleProfPic {
     border-radius: 100%;
     width: 280px;
     height: 280px;
-    border: 2px solid #EDEF70;
+    border: 2px solid #edef70;
   }
   #contentContainer {
     text-align: start;
@@ -22,46 +22,60 @@
       display: flex;
       flex-direction: column;
       padding: 20px;
+      .cvButton {
+        width: 200px;
+        margin-left: auto;
+      }
     }
   }
 }
 
-.title{
-  color: $primary-color; 
-  width: 100%; 
-  padding-bottom: 10px; 
-  border-left:12px solid #EDEF70;
+.title {
+  color: $primary-color;
+  width: 100%;
+  padding-bottom: 10px;
+  border-left: 12px solid #edef70;
   padding: 10px;
   font-size: 2rem;
 }
 .presentationCard {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
-    height: 420px;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 30px;
-  }
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 420px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+}
 
-  .actionBtn {
-    background-color: #EDEF70;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #191b1f;
-  }
+.actionBtn {
+  background-color: #edef70;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #191b1f;
+}
 
-  .actionBtn:hover {
-    background-color: #FFD907;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 22px 21px ;
-    transition: ease-in 300ms;
+.actionBtn:hover {
+  background-color: #ffd907;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 22px 21px;
+  transition: ease-in 300ms;
+}
+
+@media screen and (max-width: $mobile-devices-width) {
+  #contentContainer {
+    flex-direction: column !important;
   }
+  .exampleProfPic {
+    width: 180px !important;
+    height: 220px !important;
+  }
+}

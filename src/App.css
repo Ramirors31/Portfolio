@@ -8,9 +8,10 @@
 }
 
 .holeContent {
-  animation: ease-in 2s page-entrance;
-  padding: 0 20px;
-
+  animation: ease-in 700ms page-entrance;
+  padding: 0 45px 30px 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-reduced-motion: no-preference) {

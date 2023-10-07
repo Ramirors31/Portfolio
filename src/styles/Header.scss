@@ -1,0 +1,47 @@
+@import "../styles/variables.scss";
+#appHeaderContainer {
+  z-index: 100;
+  background-color: #1a1a1a;
+  height: $header-height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  transition: top 0.6s ease-in-out;
+}
+
+.showHeader {
+  top: 0;
+}
+
+.hideHeader {
+  top: -$header-height;
+}
+
+#headerName {
+  color: #edef70;
+}
+
+#menuContainer {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.menuOption {
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  border: none;
+}
+
+.menuOption:hover {
+  color: #edef70;
+  transition: ease-in 200ms;
+}
+
